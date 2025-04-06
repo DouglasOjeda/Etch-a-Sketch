@@ -54,8 +54,8 @@ main {
 }
 .grid-container {
     box-sizing: border-box;
-    min-height: 500px;
-    min-width: 500px;
+    min-height: 600px;
+    min-width: 600px;
 
 }
 .grid-container, .box {
