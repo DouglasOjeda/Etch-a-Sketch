@@ -53,13 +53,19 @@ main {
     justify-content: center;
 }
 .grid-container {
-    box-sizing: border-box;
-    min-height: 600px;
-    min-width: 600px;
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 600px;
+    width: 600px;
 
 }
 .grid-container, .box {
-    border: 2px dotted #99001A;
+    border: 1px inset #99001A;
+}
+.box {
+    box-sizing: border-box;
 }
 /* Footer */
 footer {
