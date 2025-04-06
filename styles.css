@@ -72,7 +72,7 @@ main {
 
 }
 .grid-container, .box {
-    border: 1px inset #99001A;
+    border: 1px inset black;
 }
 .box {
     box-sizing: border-box;
