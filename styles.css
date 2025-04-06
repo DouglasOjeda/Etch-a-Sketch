@@ -12,7 +12,7 @@ header {
     align-items: center;
     display: flex;
     flex-direction: column;
-    height: 200px;
+    min-height: 200px;
     justify-content: center;
 }
 .header-container {
@@ -25,6 +25,7 @@ header {
     width: 100%;
 }
 .header-text {
+    text-align: center;
     color: #99001A;
     font-size: 48px;
     margin: 0;
