@@ -42,8 +42,17 @@ header {
     width: 100%;
 }
 .buttons-list button {
+    background-color: DFFAF0    ;
+    border-color: #99001A;
+    border-radius: 8px;
     color: #99001A;
     font-size: 16px;
+}
+button:hover {
+    cursor: pointer;
+}
+button:active {
+    transform: scale(0.95);
 }
 /* Main body */
 main {
@@ -54,6 +63,7 @@ main {
 }
 .grid-container {
     box-sizing: content-box;
+    cursor: pointer;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
