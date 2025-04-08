@@ -12,8 +12,8 @@ header {
     align-items: center;
     display: flex;
     flex-direction: column;
-    min-height: 200px;
-    justify-content: center;
+    min-height: 120px;
+    justify-content: flex-start;
 }
 .header-container {
     align-items: center;
@@ -29,6 +29,7 @@ header {
     color: #99001A;
     font-size: 48px;
     margin: 0;
+    margin-top: 10px;
 }
 .buttons-list {
     align-items: center;
@@ -67,8 +68,8 @@ main {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    height: 600px;
-    width: 600px;
+    min-height: 500px;
+    width: 500px;
 
 }
 .grid-container, .box {
