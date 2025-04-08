@@ -3,6 +3,7 @@ let selectedColor = defaultColor;
 const gridContainer = document.querySelector(".grid-container");
 let gridContainerSize = gridContainer.clientHeight;
 let mouseDown = false;
+let rainbowMode = false;
 
 const newButton = document.getElementById("new");
 const clearButton = document.getElementById("clear");
@@ -40,7 +41,7 @@ function createBoxes(gridSize) {
 }
 
 function colorBox(box, color) {
-    box.style.backgroundColor = color;
+    box.style.backgroundColor = rainbowMode ? randomColor() : color;
     console.log("Box colored");
 }
 
@@ -48,6 +49,11 @@ function isColor(color) {
     const s = new Option().style;
     s.color = color;
     return s.color !== "";
+}
+
+function randomColor() {
+    const color = selectedColor = '#' + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');
+    return color;
 }
 
 //Button functionality
@@ -65,6 +71,7 @@ clearButton.addEventListener("click", () => {
 pickColorButton.addEventListener("click", () => {
     const color = prompt("Type the color you want to use: ");
     if (isColor(color)) {
+        rainbowMode = false;
         selectedColor = color;
     }
     else {
@@ -72,13 +79,7 @@ pickColorButton.addEventListener("click", () => {
     }
 })
 
-rainbowButton.addEventListener("click", () => {
-    boxes = document.querySelectorAll(".box");
-    boxes.forEach((box) => box.addEventListener("mouseover", () => {
-        selectedColor = '#' + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');
-        console.log(selectedColor);
-    }));
-})
+rainbowButton.addEventListener("click", () => rainbowMode = true);
 
 // Program starts with a 16x16 grid
 createBoxes(16);
