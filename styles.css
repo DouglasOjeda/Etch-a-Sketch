@@ -43,7 +43,6 @@ header {
     width: 100%;
 }
 .buttons-list button {
-    background-color: DFFAF0    ;
     border-color: #99001A;
     border-radius: 8px;
     color: #99001A;
@@ -63,20 +62,19 @@ main {
     justify-content: center;
 }
 .grid-container {
-    box-sizing: content-box;
+    box-sizing: border-box;
     cursor: pointer;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    min-height: 500px;
     width: 500px;
-
 }
 .grid-container, .box {
     border: 1px inset black;
 }
 .box {
     box-sizing: border-box;
+    aspect-ratio: 1 / 1;
 }
 /* Footer */
 footer {

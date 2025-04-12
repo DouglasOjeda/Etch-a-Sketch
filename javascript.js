@@ -13,11 +13,12 @@ const rainbowButton = document.getElementById("rainbow");
 function createBox (boxSize) {
     const box = document.createElement("div");
     box.classList.add("box");
-    box.style.height = boxSize + "px";
-    box.style.width = boxSize + "px";
+    box.style.width = boxSize + "%";;
     box.ondragstart = (e) => e.preventDefault();
-    box.addEventListener("mousedown", () => mouseDown = true);
-    box.addEventListener("mousedown", () => colorBox(box, selectedColor));
+    box.addEventListener("mousedown", () => {
+        colorBox(box, selectedColor);
+        mouseDown = true
+    });
     box.addEventListener("mouseup", () => mouseDown = false);
     box.addEventListener("mouseover", () => {
         if (mouseDown) {
@@ -32,10 +33,9 @@ function createBoxes(gridSize) {
         alert("Error: Invalid Choice");
         return;
     }
-    let boxSize = gridContainerSize / gridSize;
     for (let i = 0; i < gridSize; i++) {
         for (let j = 0; j < gridSize; j++) {
-            createBox(boxSize);
+            createBox(100 / gridSize);
         }
     }
 }
